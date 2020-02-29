@@ -1,11 +1,13 @@
-const fs = require("fs");
-const util = require("util");
-const inquirer = require("inquirer");
+const fs = require("fs")
+const util = require("util")
+const inquirer = require("inquirer")
+const path = require("path")
+
 
 const api = require("./api")
 const markdown = require("./generateMarkdown")
 
-const fileWriter = util.promisify(fs.writeFile);
+const fileWriter = util.promisify(fs.writeFile)
 
 const questions = [
     {
@@ -48,7 +50,7 @@ const questions = [
         message: "Enter your GitHub username",
         name: "username"
     }
-];
+]
 //TODO begin to think ab out begin to worry about thinking to think of starting to be concerned about thinkin
 //about worrying about man bear pig
 function promptUser() {
@@ -70,18 +72,18 @@ function writeToFile(fileName, data) {
 
 async function init() {
     try {
-        const fileName = "../generated-READMEs/README.md"
+        const fileName = path.resolve("../generated-READMEs/README.md")
         //ask questions
-        const answers = await promptUser();
+        const answers = await promptUser()
 
         const md = await generateMarkdown(answers)
 
         writeToFile(fileName, md)
 
-        console.log("Created README file");
+        console.log("Created README file")
     } catch (err) {
-        console.log(err);
+        console.log(err)
     }
 }
 
-init();
+init()

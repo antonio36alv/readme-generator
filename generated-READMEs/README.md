@@ -1,9 +1,9 @@
-# jkfasd
+# This is a project title
 
 ![js badge](https://img.shields.io/badge/Made%20With:-Javascript-yellow)
 
 ## Description
-jkfasd
+This is the description of the project
 
 # Table Contents 
 [Installation](#installation)
@@ -20,19 +20,19 @@ jkfasd
 
 
 # Installation 
-jkfasd
+Node Js is required for this
 
 # Usage
-jkfasd
+N/A
 
 # License
-jkfasd
+N/A
 
 # Contributing
-jkfasd
+N/A
 
 # Tests
-jkfasd
+N/A
 
 # Username
 antonio36alv
