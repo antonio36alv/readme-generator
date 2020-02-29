@@ -1,5 +1,5 @@
 function generateMarkdown(data) {
-//TODO add badge
+
     return `# ${data.title}
 
 ![js badge](https://img.shields.io/badge/Made%20With:-Javascript-yellow)

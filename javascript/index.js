@@ -51,9 +51,8 @@ const questions = [
         name: "username"
     }
 ]
-//TODO begin to think ab out begin to worry about thinking to think of starting to be concerned about thinkin
-//about worrying about man bear pig
-function promptUser() {
+
+function getInput() {
     return inquirer.prompt(questions)
 }
 
@@ -74,7 +73,7 @@ async function init() {
     try {
         const fileName = path.resolve("../generated-READMEs/README.md")
         //ask questions
-        const answers = await promptUser()
+        const answers = await getInput()
 
         const md = await generateMarkdown(answers)
 
